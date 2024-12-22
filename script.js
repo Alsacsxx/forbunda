@@ -9,8 +9,7 @@ const kucing = [
     "₍ ᐢ.ˬ.ᐢ₎˚୨୧"
 ];
 
-// Memainkan audio otomatis saat halaman dimuat
-let currentIndex = 0; // Index awal untuk array teks
+let currentIndex = 0; 
 
 window.onload = () => {
     const audio = document.getElementById("audio");
@@ -22,11 +21,9 @@ window.onload = () => {
 document.getElementById("kucingButton").addEventListener("click", () => {
     const kucingDisplay = document.getElementById("kucingDisplay");
 
-    // Tampilkan teks secara berurutan
     kucingDisplay.innerText = kucing[currentIndex];
     currentIndex++;
 
-    // Reset index jika sudah sampai akhir array
     if (currentIndex >= kucing.length) {
         currentIndex = 0;
     }
